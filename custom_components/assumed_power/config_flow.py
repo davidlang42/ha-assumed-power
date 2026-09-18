@@ -33,9 +33,6 @@ class AssumedPowerConfigFlow(config_entries.ConfigFlow, domain="assumed_power"):
 class AssumedPowerOptionsFlowHandler(config_entries.OptionsFlow):
     """Handle options flow to edit values later from the UI."""
 
-    def __init__(self, config_entry):
-        self.config_entry = config_entry
-
     async def async_step_init(self, user_input=None):
         """Manage the options."""
         if user_input is not None:
