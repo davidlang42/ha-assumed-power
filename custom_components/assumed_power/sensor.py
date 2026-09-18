@@ -1,6 +1,6 @@
 """Sensor platform for Assumed Power and Energy."""
 from datetime import timedelta
-from homeassistant.util.slugify import slugify  # <--- Import slugify
+from homeassistant.util.slugify import slugify
 from homeassistant.components.sensor import (
     SensorDeviceClass,
     SensorEntity,
@@ -18,7 +18,6 @@ async def async_setup_entry(
     """Set up the assumed power and energy sensors from a config entry."""
     power_sensor = AssumedPowerSensor(entry)
     
-    # Generate the correct entity ID based on the user-provided name
     device_name = entry.data.get('name', 'ZBM5')
     power_entity_id = f"sensor.{slugify(device_name)}_power"
     
