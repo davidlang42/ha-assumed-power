@@ -18,7 +18,7 @@ async def async_setup_entry(
     """Set up the assumed power and energy sensors from a config entry."""
     power_sensor = AssumedPowerSensor(entry)
     
-    device_name = entry.data.get('name', 'ZBM5')
+    device_name = entry.data.get('name', 'Assumed Power')
     power_entity_id = f"sensor.{slugify(device_name)}_power"
     
     energy_sensor = IntegrationSensor(
