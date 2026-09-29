@@ -28,7 +28,7 @@ class AssumedPowerConfigFlow(config_entries.ConfigFlow, domain="assumed_power"):
     @staticmethod
     @callback
     def async_get_options_flow(config_entry):
-        return AssumedPowerOptionsFlowHandler(config_entry)
+        return AssumedPowerOptionsFlowHandler()
 
 class AssumedPowerOptionsFlowHandler(config_entries.OptionsFlow):
     """Handle options flow to edit values later from the UI."""
