@@ -1,0 +1,13 @@
+{
+  "icon": "mdi:flash",
+  "entity": {
+    "sensor": {
+      "power": {
+        "default": "mdi:flash"
+      },
+      "energy": {
+        "default": "mdi:lightning-bolt"
+      }
+    }
+  }
+}
