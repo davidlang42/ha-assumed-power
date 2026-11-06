@@ -39,6 +39,7 @@ async def async_setup_entry(
         unit_time="h",
         round_digits=3,
         max_sub_interval=None,
+        device_class=SensorDeviceClass.ENERGY,
     )
     
     async_add_entities([power_sensor, energy_sensor])
